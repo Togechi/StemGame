@@ -1,0 +1,9 @@
+// Initialisng Phaser framework
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '');
+
+// Adding States
+game.state.add('bootState', bootState);
+game.state.add('loadState', loadState);
+
+// Starting the boot state1
+game.state.start('bootState');
