@@ -7,7 +7,8 @@ bootState.prototype = {
     // Loading logo
       game.load.image('logo', 'assets/hydrogen.png');
 
-
+// Smoothing disabled
+      game.stage.smoothed = false;
 
 },
 
@@ -17,18 +18,10 @@ create: function () {
   // Initiating physics system
 game.physics.startSystem(Phaser.Physics.P2JS);
 
-
-
-var wkey = game.input.keyboard.addKey(Phaser.Keyboard.W);
-wkey.onDown.addOnce(this.start, this);
-
-
-
-
-},
-
-start: function () {
-  game.state.start('loadState');  
+// Start load state
+game.state.start('loadState');
 }
+
+
 
 };
