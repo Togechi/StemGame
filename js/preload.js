@@ -2,6 +2,13 @@
 var loadState = function(game){};
 
 loadState.prototype = {
+  preload: function() {
+
+    // Load assets needed
+    game.load.image('startButton', 'assets/Start.png');
+    game.load.image('optionsButton', 'assets/Options.png');
+    game.load.image('menuBackground', 'assets/MenuBackground.png');
+  },
 
 
   create: function () {
@@ -14,6 +21,7 @@ loadState.prototype = {
       // Setting background colour
       game.stage.backgroundColor = "rgba(255, 177, 252, 0.5)";
 
-
+// Start menu state
+game.state.start('menuState');
   }
 };
