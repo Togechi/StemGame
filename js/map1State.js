@@ -53,8 +53,9 @@ else if (cursors.right.isDown)
 {
     player.body.moveRight(300);
 }
-
-game.physics.p2.collide(player, collisionLayer);
+  
+// COLLIDE DOESNT WORK RN
+//game.physics.p2.collide(player, collisionLayer);
 
 }
 
